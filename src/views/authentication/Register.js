@@ -4,10 +4,14 @@ import passwordIcon from "../../assets/password.svg"
 import "./authentication.css"
 import {useState} from "react";
 import StepContainer from "../../components/authentication/register/StepContainer";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Register = () => {
+
+    let navigate = useNavigate()
+
     const [userInput, setUserInput] = useState({})
     const [step, setStep] = useState(1)
     const [fieldError, setFieldError] = useState({
@@ -17,6 +21,7 @@ const Register = () => {
         phone: {message: "", error: false},
         password: {message: "", error: false},
         confirmPassword: { message: "", error: false}})
+
     const handleChange = (e) => {
         setUserInput({...userInput, [e.target.name]: e.target.value})
         checkIfFieldIsEmpty(e)
@@ -81,13 +86,13 @@ const Register = () => {
         <div className="authenticationContainer">
             <div className="leftSide">
                 <div className="leftSide-container">
-                    <p>
+                    <a onClick={() => navigate("/login")}>
                         Have an account?
-                        <span style={{color: 'var(--primary_green)',
-                            marginLeft: '4px' }}>
-                    Sign In
-                </span>
-                    </p>
+                            <span style={{color: 'var(--primary_green)',
+                              marginLeft: '4px' }}>
+                                Log In
+                            </span>
+                    </a>
                     <div className="welcome-text">
                         <h1 style={{color: 'var(--primary_green)'}}>welcome to Norbs</h1>
                         <p>we are event management platform,

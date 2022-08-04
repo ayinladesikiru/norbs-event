@@ -45,7 +45,7 @@
     cursor: pointer;
 }
 
-.leftSide-container p {
+.leftSide-container a {
     text-decoration: none;
     color: white;
     font-weight: bold;

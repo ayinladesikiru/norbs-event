@@ -3,10 +3,14 @@ import emailIcon from "../../assets/email.svg"
 import passwordIcon from "../../assets/password.svg"
 import "./authentication.css"
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 
 
 const Login = () => {
+
+    let navigate = useNavigate()
+
     const [userInput, setUserInput] = useState({})
     const [fieldError, setFieldError] = useState({
                 email: {message: "", error: false},
@@ -75,21 +79,21 @@ const Login = () => {
       <div className="authenticationContainer">
         <div className="leftSide">
             <div className="leftSide-container">
-                <p>
-                Dont Have an account?
-                <span style={{color: 'var(--primary_green)',
-                    marginLeft: '4px' }}>
-                    Sign Up
-                </span>
-            </p>
+                <a onClick={() => navigate("/register")}>
+                     Dont Have an account?
+                    <span style={{color: 'var(--primary_green)',
+                         marginLeft: '4px' }}>
+                        Sign Up
+                    </span>
+                </a>
                 <div className="welcome-text">
                     <h1 style={{color: 'var(--primary_green)'}}>welcome to Norbs</h1>
                     <p>we are event management platform,
                     we aimed at helping you facilitate and run a smooth event</p>
                 </div>
                     <div className="input-button-fields">
-                    <Input text="email" handleChange={handleChange}icon={emailIcon} label="email" fieldError={fieldError}/>
-                    <Input text="password" handleChange={handleChange}icon={passwordIcon} label="password" fieldError={fieldError}/>
+                    <Input text="email" handleChange={handleChange} icon={emailIcon} label="email" fieldError={fieldError}/>
+                    <Input text="password" handleChange={handleChange} icon={passwordIcon} label="password" fieldError={fieldError}/>
 
                     <button className="authentication-button" onClick={handleClick}>Get Into Norbs</button>
                 </div>
