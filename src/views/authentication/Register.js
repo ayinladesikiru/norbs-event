@@ -5,6 +5,7 @@ import "./authentication.css"
 import {useState} from "react";
 import StepContainer from "../../components/authentication/register/StepContainer";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 
@@ -28,7 +29,15 @@ const Register = () => {
     }
 
     const handleClick = () => {
-        console.log(userInput)
+
+        let data = {
+            id:2,
+            firstName: 'Asa',
+            lastName: 'Dhikirullah'
+        }
+        axios.post("http://localhost:3001/accounts", userInput)
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error))
     }
 
     const checkIfFieldIsEmpty = (e) => {

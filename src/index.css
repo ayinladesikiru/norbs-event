@@ -1,10 +1,12 @@
 :root {
   --primary_black: #0C090D;
   --primary_green: #0CCE6B;
+  --dashboard_main: #1f1f1f;
+  --dashboard_accent: #2b2d2d;
 }
 
 * {
-  font-family: 'Mingzat', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {

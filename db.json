@@ -1,0 +1,52 @@
+{
+  "accounts": [
+    {
+      "firstName": "Sikiru",
+      "lastName": "Ayinlade",
+      "email": "ayinladesikiru@gmail.com",
+      "phone": "08080",
+      "password": "1111",
+      "confirmPassword": "1111",
+      "id": 1
+    }
+  ],
+  "events": [
+    {
+      "date_created": "2015-12-23",
+      "date_updated": "2015-12-23",
+      "location": "",
+      "venue": "",
+      "stop_time": "",
+      "start_time": "",
+      "description": "",
+      "event_date": "",
+      "user": "",
+      "host": "",
+      "guest": [],
+      "attendees": [],
+      "event-banner": "",
+      "event-image": "",
+      "sponsors": [],
+      "ticket-category": "",
+      "ticket-fee": "",
+      "event-team": [],
+      "event_dress_code": "",
+      "number_of_seats": "",
+      "available-tickets": ""
+    }
+  ],
+    "fakeEvents": [
+      {
+        "title": "Alakija",
+        "description": "today is the way the Lord made"
+      },
+      {
+        "title": "Jonathan",
+        "description": "Get together landmark"
+      },
+      {
+        "title": "Uchechi",
+        "description": "today is the way the Lord made"
+      }
+    ]
+}
